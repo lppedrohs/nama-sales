@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @buyer.name %>
+</p>
+
+<%= link_to t('views.form.actions.edit'), edit_buyer_path(@buyer) %> |
+<%= link_to t('views.form.actions.back'), :back %>
