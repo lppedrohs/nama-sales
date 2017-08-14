@@ -1,0 +1,8 @@
+pt-BR:
+  views:
+    navbar:
+      title: Vendas | Nama
+    home:
+      index:
+        title: Acompanhamento de vendas
+        history: Histórico
