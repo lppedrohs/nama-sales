@@ -11,6 +11,12 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
 //= require materialize
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  Materialize.updateTextFields();
+});

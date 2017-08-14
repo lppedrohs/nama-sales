@@ -10,6 +10,7 @@ gem 'carrierwave'
 
 # Layout
 gem 'materialize-sass'
+gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 
 group :development, :test do
