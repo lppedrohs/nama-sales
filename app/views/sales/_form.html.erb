@@ -13,13 +13,13 @@
 
   <div class="row">
     <div class="input-field col s3">
-      <%= form.label :provider_id %>
-      <%= form.text_field :provider_id %>
+      <%= form.collection_select :buyer_id, Buyer.all, :id, :name %>
+      <%= form.label :buyer %>
     </div>
 
     <div class="input-field col s3">
-      <%= form.label :buyer_id %>
-      <%= form.text_field :buyer_id %>
+      <%= form.collection_select :provider_id, Provider.all, :id, :name %>
+      <%= form.label :provider %>
     </div>
   </div>
 

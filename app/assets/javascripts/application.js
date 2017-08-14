@@ -19,4 +19,5 @@
 
 document.addEventListener("turbolinks:load", function() {
   Materialize.updateTextFields();
+  $('select').material_select();
 });
