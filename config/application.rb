@@ -6,11 +6,12 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Sales
+module NameSales
   class Application < Rails::Application
     config.load_defaults 5.1
 
-    config.assets.quiet = true
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.enforce_available_locales = false
 
     console { ActiveRecord::Base.connection }
 
