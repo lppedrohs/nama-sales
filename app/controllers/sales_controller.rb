@@ -19,7 +19,7 @@ class SalesController < ApplicationController
     @sale = Sale.new(sale_params)
 
     if @sale.save
-      redirect_to @sale, notice: 'Sale was successfully created.'
+      redirect_to @sale, notice: t('flash.actions.create.notice')
     else
       render :new
     end
@@ -27,7 +27,7 @@ class SalesController < ApplicationController
 
   def update
     if @sale.update(sale_params)
-      redirect_to @sale, notice: 'Sale was successfully updated.'
+      redirect_to @sale, notice: t('flash.actions.update.notice')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class SalesController < ApplicationController
 
   def destroy
     @sale.destroy
-    redirect_to sales_url, notice: 'Sale was successfully destroyed.'
+    redirect_to sales_url, notice: t('flash.actions.destroy.notice')
   end
 
   private

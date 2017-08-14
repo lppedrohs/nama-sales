@@ -19,7 +19,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.new(provider_params)
 
     if @provider.save
-      redirect_to @provider, notice: 'Provider was successfully created.'
+      redirect_to @provider, notice: t('flash.actions.create.notice')
     else
       render :new
     end
@@ -27,7 +27,7 @@ class ProvidersController < ApplicationController
 
   def update
     if @provider.update(provider_params)
-      redirect_to @provider, notice: 'Provider was successfully updated.'
+      redirect_to @provider, notice: t('flash.actions.update.notice')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class ProvidersController < ApplicationController
 
   def destroy
     @provider.destroy
-    redirect_to providers_url, notice: 'Provider was successfully destroyed.'
+    redirect_to providers_url, notice: t('flash.actions.destroy.notice')
   end
 
   private

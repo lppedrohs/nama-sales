@@ -19,7 +19,7 @@ class BuyersController < ApplicationController
     @buyer = Buyer.new(buyer_params)
 
     if @buyer.save
-      redirect_to @buyer, notice: 'Buyer was successfully created.'
+      redirect_to @buyer, notice: t('flash.actions.create.notice')
     else
       render :new
     end
@@ -27,7 +27,7 @@ class BuyersController < ApplicationController
 
   def update
     if @buyer.update(buyer_params)
-      redirect_to @buyer, notice: 'Buyer was successfully updated.'
+      redirect_to @buyer, notice: t('flash.actions.update.notice')
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class BuyersController < ApplicationController
 
   def destroy
     @buyer.destroy
-    redirect_to buyers_url, notice: 'Buyer was successfully destroyed.'
+    redirect_to buyers_url, notice: t('flash.actions.destroy.notice')
   end
 
   private

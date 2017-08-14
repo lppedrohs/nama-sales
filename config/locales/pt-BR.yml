@@ -1,4 +1,12 @@
 pt-BR:
+  flash:
+    actions:
+      create:
+        notice: "Criado com sucesso."
+      update:
+        notice: "Atualizado com sucesso."
+      destroy:
+        notice: "Removido com sucesso."
   views:
     form:
       actions:
