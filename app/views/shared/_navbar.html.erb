@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div class="nav-wrapper">
+    <%= link_to t('views.navbar.title'), root_path, class: 'brand-logo' %>
+
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to t('views.navbar.sales'), sales_path %></li>
+      <li><%= link_to t('views.navbar.buyers'), buyers_path %></li>
+      <li><%= link_to t('views.navbar.providers'), providers_path %></li>
+    </ul>
+  </div>
+</nav>
