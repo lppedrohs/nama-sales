@@ -1,0 +1,55 @@
+<%= form_for(@sale) do |form| %>
+  <% if @sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sale.errors.count, "error") %>:</h2>
+
+      <ul>
+        <% @sale.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="input-field col s3">
+      <%= form.label :provider_id %>
+      <%= form.text_field :provider_id %>
+    </div>
+
+    <div class="input-field col s3">
+      <%= form.label :buyer_id %>
+      <%= form.text_field :buyer_id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <%= form.label :description %>
+      <%= form.text_area :description, class: 'materialize-textarea' %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s3">
+      <%= form.label :price %>
+      <%= form.text_field :price %>
+    </div>
+
+    <div class="input-field col s3">
+      <%= form.label :quantity %>
+      <%= form.number_field :quantity %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s6">
+      <%= form.label :address %>
+      <%= form.text_field :address %>
+    </div>
+  </div>
+
+  <div class="row">
+    <%= form.submit t('views.form.actions.submit'), class: 'waves-effect waves-light btn' %>
+  </div>
+<% end %>

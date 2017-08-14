@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= link_to @sale.buyer.name, buyer_path(@sale.buyer) %>
+</p>
+
+<p>
+  <strong>Fornecedor:</strong>
+  <%= link_to @sale.provider.name, provider_path(@sale.provider) %>
+</p>
+
+<p>
+  <strong>Descrĩção:</strong>
+  <%= @sale.description %>
+</p>
+
+<p>
+  <strong>Preço:</strong>
+  <%= @sale.price %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @sale.quantity %>
+</p>
+
+<p>
+  <strong>Endereço:</strong>
+  <%= @sale.address %>
+</p>
+
+<%= link_to t('views.form.actions.edit'), edit_sale_path(@sale) %> |
+<%= link_to t('views.form.actions.back'), :back %>
