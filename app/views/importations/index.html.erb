@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Importar Novo</h3>
+
+<% if @importation.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@importation.errors.count, "error") %>:</h2>
+    <ul>
+      <% @importation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for(@importation) do |form| %>
+  <div class="row">
+    <div class="file-field input-field col s8">
+      <div class="btn">
+        <span><%= t('views.form.actions.file') %></span>
+        <%= form.file_field :file, required: true %>
+      </div>
+      <div class="file-path-wrapper">
+        <%= text_field_tag nil, nil, class: 'file-path col s6' %>
+      </div>
+    </div>
+
+    <div class="col s3">
+      <%= form.submit t('views.form.actions.import'), class: 'btn' %>
+    </div>
+  </div>
+<% end %>
+
+<h2>Dados importados</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Data</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @importations.each do |importation| %>
+      <tr>
+        <td><%= importation.id %></td>
+        <td><%= l(importation.created_at, format: :short) %></td>
+        <td><%= link_to t('views.form.actions.show'), importation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

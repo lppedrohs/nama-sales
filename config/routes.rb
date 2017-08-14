@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :sales
   resources :buyers
   resources :providers
+
+  resources :importations, only: [:index, :create, :show]
 end

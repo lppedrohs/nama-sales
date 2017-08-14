@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814032413) do
+ActiveRecord::Schema.define(version: 20170814041100) do
 
   create_table "buyers", force: :cascade do |t|
     t.string "name"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20170814032413) do
     t.integer "buyer_id"
     t.text "description"
     t.decimal "price", precision: 10, scale: 2
-    t.integer "quantity"
+    t.integer "quantity", default: 1
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
