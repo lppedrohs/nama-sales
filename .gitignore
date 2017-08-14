@@ -28,3 +28,5 @@ config/database.yml
 .ruby-gemset
 
 Gemfile.lock
+
+public/uploads/*
