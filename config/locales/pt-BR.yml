@@ -16,11 +16,15 @@ pt-BR:
         edit: Editar
         show: Detalhes
         destroy: Remover
+        file: Arquivo
+        import: Importar
     navbar:
       title: Vendas | Nama
       sales: Vendas
       buyers: Compradores
       providers: Fornecedores
+      home: Início
+      importations: Importações
     home:
       index:
         title: Acompanhamento de vendas
@@ -41,3 +45,88 @@ pt-BR:
       provider:
         name: Nome
         created_at: Criado em
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+      full_date: "%d de %B de %Y, às %H:%M h"
+    pm: ''
+  date:
+    today: Hoje
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_short_day_names:
+    - D
+    - S
+    - T
+    - Q
+    - Q
+    - S
+    - S
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      date: "dd/mm/yyyy"
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%A - %d de %B"
+      calendar_title: "%A, %d de %B"
+      hour: '%Hh%Mm'
+      extensive: "%d/%m/%Y"
+      full_date: "%d de %B de %Y, às %H:%M"
+      hour: '%Hh%Mm'
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    month_names_without_spaces:
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
