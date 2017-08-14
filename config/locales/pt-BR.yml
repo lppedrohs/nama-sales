@@ -25,3 +25,19 @@ pt-BR:
       index:
         title: Acompanhamento de vendas
         history: Histórico
+  activerecord:
+    attributes:
+      sale:
+        description: Descrição
+        buyer: Comprador
+        provider: Fornecedor
+        price: Preço unitário
+        quantity: Quantidade
+        address: Endereço
+        created_at: Criado em
+      buyer:
+        name: Nome
+        created_at: Criado em
+      provider:
+        name: Nome
+        created_at: Criado em
