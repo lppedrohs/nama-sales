@@ -13,8 +13,9 @@
 <br/>
 
 <h4>Vendas</h4>
+<h5 class="right">Total: <%= @importation.total_mount %></h5>
 
-<%= render 'sales/list', sales: @importation.sales %>
+<%= render 'sales/list', sales: @sales %>
 
 <br/>
 <%= link_to t('views.form.actions.back'), :back %>

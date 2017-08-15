@@ -16,7 +16,8 @@ class ImportationsController < ApplicationController
   end
 
   def show
-    @importation = Importation.find params[:id]
+    @importation = Importation.find(params[:id])
+    @sales       = Sale.includes(:buyer, :provider).where(importation: @importation)
   end
 
   private
