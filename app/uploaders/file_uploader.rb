@@ -10,7 +10,7 @@ class FileUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-    "#{Time.now.to_i}-#{original_filename}.#{file.extension}" if original_filename.present?
+    "#{Time.now.to_i}-#{original_filename}" if original_filename.present?
   end
 
 end
