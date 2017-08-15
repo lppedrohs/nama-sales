@@ -15,6 +15,7 @@ gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'faker'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -26,9 +27,6 @@ group :development do
 end
 
 group :test do
-  gem 'webmock'
-  gem 'json-schema'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'spring-commands-rspec'
 end
