@@ -49,7 +49,7 @@
       <tr>
         <td><%= importation.id %></td>
         <td><%= importation.sales.length %></td>
-        <td><%= importation.total_mount %></td>
+        <td><%= money(importation.total_mount) %></td>
         <td><%= l(importation.created_at, format: :short) %></td>
         <td><%= link_to t('views.form.actions.show'), importation %></td>
       </tr>

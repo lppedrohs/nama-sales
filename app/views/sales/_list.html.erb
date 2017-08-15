@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to sale.buyer.name, buyer_path(sale.buyer) %></td>
         <td><%= link_to sale.provider.name, provider_path(sale.provider) %></td>
-        <td><%= sale.price %></td>
+        <td><%= money(sale.price) %></td>
         <td><%= sale.quantity %></td>
         <td><%= link_to t('views.form.actions.show'), sale %></td>
         <td><%= link_to t('views.form.actions.edit'), edit_sale_path(sale) %></td>

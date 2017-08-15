@@ -13,7 +13,7 @@
 <br/>
 
 <h4>Vendas</h4>
-<h5 class="right">Total: <%= @importation.total_mount %></h5>
+<h5 class="right">Total: <%= money(@importation.total_mount) %></h5>
 
 <%= render 'sales/list', sales: @sales %>
 
