@@ -9,9 +9,48 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ *= require materialize
  *= require_tree .
  *= require_self
  */
 
-@import "materialize";
+.container {
+  padding-bottom: 36px;
+}
+
+.navbar {
+  background-color: #212121;
+
+  ul a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn {
+  background-color: #0277bd;
+
+  &:hover {
+    background-color: #01579b;
+  }
+}
+
+.input-field label {
+  color: #757575;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #01579b;
+  box-shadow: 0 1px 0 0 #01579b;
+}
