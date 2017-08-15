@@ -37,7 +37,8 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>Data</th>
+      <th>Vendas importadas</th>
+      <th>Criado em</th>
       <th></th>
     </tr>
   </thead>
@@ -46,6 +47,7 @@
     <% @importations.each do |importation| %>
       <tr>
         <td><%= importation.id %></td>
+        <td><%= importation.sales.length %></td>
         <td><%= l(importation.created_at, format: :short) %></td>
         <td><%= link_to t('views.form.actions.show'), importation %></td>
       </tr>

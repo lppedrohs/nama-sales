@@ -1,0 +1,20 @@
+<p>
+  <strong>Arquivo:</strong>
+  <%= link_to @importation.file_url, @importation.file_url, target: '_blank' %>
+</p>
+
+<p>
+  <strong>Criado em:</strong>
+  <%= l(@importation.created_at, format: :long) %>
+</p>
+
+<br/>
+<hr/>
+<br/>
+
+<h4>Vendas</h4>
+
+<%= render 'sales/list', sales: @importation.sales %>
+
+<br/>
+<%= link_to t('views.form.actions.back'), :back %>
