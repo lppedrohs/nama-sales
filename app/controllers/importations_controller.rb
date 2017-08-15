@@ -2,7 +2,7 @@ class ImportationsController < ApplicationController
 
   def index
     @importation  = Importation.new
-    @importations = Importation.includes(:sales)
+    @importations = Importation.includes(:sales).order(created_at: :desc)
   end
 
   def create
