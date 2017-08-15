@@ -2,15 +2,21 @@ class ImportationsController < ApplicationController
 
   def index
     @importation  = Importation.new
-    @importations = Importation.all
+    @importations = Importation.includes(:sales)
   end
 
   def create
-    @importation = FileParserService.new(importation_params).call
+    @importation = Importation.new(importation_params)
 
-    @importation.save
+    if @importation.save
+      ImportSalesService.new(@importation).call
+    end
 
     redirect_to importations_path
+  end
+
+  def show
+    @importation = Importation.find params[:id]
   end
 
   private
